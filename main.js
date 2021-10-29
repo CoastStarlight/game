@@ -1,28 +1,14 @@
-var c = document.getElementById("game");
-var ctx = c.getContext("2d");
-ctx.beginPath();
-ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-ctx.stroke();
-var ctx = c.getContext("2d");
+float circle_x = 300;
+float circle_y = 20;
 
-//function to draw circles
-function drawCircle(x,y){
-
-    //randomly chose color and size for circles
-    var randC = color[Math.floor(Math.random() * color.length)];
-    var randS = Math.floor(Math.random() * (80 - 30)) + 30;
-
-    //draw circles
-    ctx.beginPath();
-    ctx.arc(x,y,randS,0,2*Math.PI);
-
-    //make gradient for random color and fill
-    var grd=ctx.createLinearGradient(0,0,170,0);
-    grd.addColorStop(0,randC);
-    grd.addColorStop(1,"transparent");
-
-    ctx.fillStyle=grd;
-    ctx.fill();
-    ctx.closePath();
+void setup() {
+  size(400, 200);
+  stroke(#D60DFF);
+  strokeWeight(7);
 }
-drawCircle(100,100)
+void draw() {
+  background(#21EA73);
+  ellipse(circle_x, circle_y, 40, 40);
+  circle_x = circle_x - 2;
+  circle_y = 20
+}
