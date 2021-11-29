@@ -5,8 +5,18 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <canvas id="game">
-        </canvas>
-        <script src="main.js"></script>
+        <button id="up" onclick="num++">turn up</button>
+        <h1 id="current">100</h1>
+        <button id="up" onclick="num = num - 1">turn down</button>
+        <h2>goal</h2>
+        <h1 id="goal">112</h1>
+        <script>
+        let num = 100
+        let goal = 112
+        while true {
+        document.getElementById(current).innerHTML = num
+        document.getElementById(goal).innerHTML = goal
+        }
+        </script>
     </body>
 </html>
